@@ -16,6 +16,9 @@ app.use(express.json());
 app.use("/api/user", userRouter);
 app.use("/api/job", jobRouter);
 app.use("/api/likes", likeRouter);
+app.use('/', (req, res) =>{
+    res.json({msg: "Welcome to the job server"})
+})
 
 app.use(appLevelErrorHandlerMiddleware);
 
