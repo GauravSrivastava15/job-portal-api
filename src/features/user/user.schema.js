@@ -15,7 +15,8 @@ export const userSchema = new mongoose.Schema({
   mobile: {
     type: String,
     unique: true,
-    required: [true, "mobile number is reuired"],
+    required: [true, "mobile number is reuired "],
+    match: [/^\d{10}$/, 'Mobile number must be exactly 10 digits']
   },
   age: {
     type: Number,

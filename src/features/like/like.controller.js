@@ -3,6 +3,7 @@ import { getLikesRepo, likeRepo } from "./like.repository.js";
 
 export const like = async (req, res, next) => {
   const { model, id } = req.query;
+  // console.log(model,id)
   if ((model !== "Job" && model !== "User") || !id) {
     return res
       .status(400)
